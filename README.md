@@ -14,15 +14,19 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 新建虚拟机  
 安装CentOS 6.4操作系统 
 
-## Linux     
+## Linux  
+**关机:**halt---重启：reboot/init 6(安全重启）（root用户下）  
 **进入终端:**Ctrl+Alt+T  
-**清除终端:**clear
-   
+**清除终端:**clear  
+**显示当前目录:**pwd  
+**查看主机名称:**hostname---修改主机名称:hostname newname(重启后失效） 
+**读取文件内容:**cat---cat /etc/sysconfig/network  
+**编辑文件内容:**vi(i键进入编辑插入模式，esc键退出，:wq保存/q!不保存）---vi /etc/sysconfig/network
+  
 #：表示root用户---$：普通用户  
 **启用root用户:**sudo passwd root  
-*root用户下新增普通用户:**useradd hehuan---设置密码：passwd hehuan123  
+**root用户下新增普通用户:**useradd hehuan---设置密码：passwd hehuan123---用户目录:/home/hehuan(~代替）   
 **切换用户:**切换到root用户：su root(获取权限，未获取环境变量;su - root(su)直接切换)---切换到普通用户：su hehuan（su - hehuan)  
-  
   
 **ip配置:**菜单虚拟机-->网络适配器-->设备状态-->启动是连接-->网络连接-->NAT模式  
 **查看IP：ifconfig**---主要看网卡和IP地址---ping www.baidu.com进行检查  
