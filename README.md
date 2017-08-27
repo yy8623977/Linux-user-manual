@@ -22,7 +22,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 ### 文件操作  
 **权限:**可读（r/2^2)---可写（w/2^1)---可执行（针对脚本文件x/2^0)  ---(-表示的没有任何权限）  
 **文件的归属:**拥有者（owner/u)---属于组(group/g)---其他人(other/o)  
-**文件类型:**文件(_)---目录(d)---连接(l)  
+**文件类型:**文件(_)---目录(d)---连接(l) （软连接/硬连接） 
 **文件详细说明:**
 1. 第一部分：第一个代表文件的类型，后面分三组代表不同权限用户的权限（u/g/o)  
 2. 第二部分：拥有者---属于组  
@@ -34,12 +34,17 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **查看主机名称:**hostname---修改主机名称:hostname newname(重启后失效）  
 **读取文件内容:**cat---cat /etc/sysconfig/network  
 **编辑文件内容:**vi(i键进入编辑插入模式，esc键退出，:wq保存/q!不保存）---vi /etc/sysconfig/network  
-**文件拷贝:**cp&nbsp;文件名&nbsp;目标位置  
+**文件拷贝:**cp&nbsp;文件名&nbsp;目标位置（文件名/目录）---cp&nbsp;-r&nbsp;目录&nbsp;目录  
 **改变文件的拥有者/所在组:**chown/chgrp&nbsp;用户名&nbsp;文件名(-R,--recursive递归，如果改变的是文件夹，其自己也需要同样的权限，在chown/chgrp后加上-R）---chown&nbsp;用户名:用户名&nbsp;文件名（第一个代表用户，第二个代表组)  
 **删除文件:**rm&nbsp;-rf&nbsp;文件名  
+**创建文件夹:**mkdir&nbsp;文件夹名(mkdir后面加-p可创建多级目录）  
 **创建文件:**touch&nbsp;文件名---vi/vim&nbsp;文件名  
 **追加内容:**echo&nbsp;"xxxx"&nbsp;>>&nbsp;文件名  
 **查看文件内容:**cat（全部内容）---more(翻页查看）---tail（文件末尾，通常与-f/-100f连用，ctrl+c退出)---head(文件开头）  
+**文件的移动和重命名:**mv&nbsp;source&nbsp;target(source是要移动的文件或是文件夹，target是文件或者是文件夹，同目录则重命名，不同目录则移动，如果后加其它文件名或者是文件夹，则移动加重命名）  
+**删除文件/文件夹:**rmdir&nbsp;文件夹(必须是空目录）---rm&nbsp;-rf&nbsp;source(最好是绝对路径，确定好才删除）  
+**文件查找:**find&nbsp;~&nbsp;-name&nbsp;文件名/文件夹名（当前目录）---find&nbsp;/&nbsp;-name&nbsp;文件名/文件夹名（跟目录）---可以匹配正则表达式  
+**创建连接:**ln&nbsp;-s&nbsp;文件名/文件夹名&nbsp;连接名（有-s是软连接，无-s是硬连接,相当于拷贝)  
   
 ### vi/vim快捷键
 **(查看模式下）**
@@ -50,6 +55,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
   
  ### 用户操作  
 #：表示root用户---$：普通用户  
+**查看用户信息:**id  
 **启用root用户:**sudo passwd root  
 **root用户下新增普通用户:**useradd hehuan---设置密码：passwd hehuan123---用户目录:/home/hehuan(~代替）   
 **切换用户:**切换到root用户：su root(获取权限，未获取环境变量;su - root(su)直接切换)---切换到普通用户：su hehuan（su - hehuan)  
