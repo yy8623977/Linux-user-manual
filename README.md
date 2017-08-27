@@ -18,7 +18,9 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **关机:**halt---重启：reboot/init 6(安全重启）（root用户下）  
 **进入终端:**Ctrl+Alt+T  
 **清除终端:**clear  
-**显示当前目录:**pwd  
+**显示当前目录:**pwd---切换目录：cd  
+**显示当前目录下的文件:**ls/ls&nbsp;-l/ll/ls&nbsp;-lt/ls&nbsp;-a/ls&nbsp;-at  
+**特殊目录标识符:**一个点.表示当前目录----两个点..表示父级目录  
 **查看主机名称:**hostname---修改主机名称:hostname newname(重启后失效） 
 **读取文件内容:**cat---cat /etc/sysconfig/network  
 **编辑文件内容:**vi(i键进入编辑插入模式，esc键退出，:wq保存/q!不保存）---vi /etc/sysconfig/network
@@ -31,7 +33,20 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **ip配置:**菜单虚拟机-->网络适配器-->设备状态-->启动是连接-->网络连接-->NAT模式  
 **查看IP：ifconfig**---主要看网卡和IP地址---ping www.baidu.com进行检查  
 **更改为固定IP:**图形界面-->右击-->edit connections-->网卡名-->点击-->ipv4 setting-->manual-->输入address、netmast、  
-gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识点练习   
+gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识点练习  
+  
+**远程连接**  
+**要素:**ip地址/用户名/密码/协议ssh  
+**工具:**    
+1. **SecureCRT**---步骤：win7-->C：windows\System32\drivers\hosts-->localhost-->ip&nbsp;主机名&nbsp;域名  
+-->secureCRT-->快速连接-->主机名-->用户名-->密码-->cat /etc/hosts-->root-->vi /etc/hosts-->ip&nbsp;主机名&nbsp;域名  
+2. **远程FTP:**主机/用户名/密码/端口（22）-->通过文件拖拽上传与下载  
+3. **Notepad**show-->setting-->profile setting-->addnew-->主机名/端口/用户名/密码-->进行连接  
+-->**创建文件**-->touch readme.txt-->先VI命令添加随便添加一点点东西-->Notepad打开进行编辑保存  
+**ultraEdit:**FTP帐号-->帐号管理-->帐号/协议/服务器/端口(22)/用户名/密码-->视图-->查看方式(可以根据不同的用处选择编辑模式） 
+4. **远程界面工具:Xmanager4**-->Xbrowser-->new-->Xstart&nbsp;Session-->名称/主机名/协议/用户名/密码/  
+-->Execution&nbsp;Command(选择最后一个）-->双击-->保存-->右击-->open in terminal
+
   
 
 
