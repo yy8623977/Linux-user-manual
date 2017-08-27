@@ -21,16 +21,17 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
   
 **文件操作**  
 **权限:**可读（r/2^2)---可写（w/2^1)---可执行（针对脚本文件x/2^0)  ---(-表示的没有任何权限）  
-**文件的归属:**拥有者（owner/u)---属于组(group/g)---其他人(other/o)
+**文件的归属:**拥有者（owner/u)---属于组(group/g)---其他人(other/o)  
 **文件类型:**文件(_)---目录(d)---连接(l)  
 **文件详细说明:**
 1. 第一部分：第一个代表文件的类型，后面分三组代表不同权限用户的权限（u/g/o)  
 2. 第二部分：拥有者---属于组  
 3. 文件的大小---文件的创建日期---文件的名称  
+  
 **显示当前目录:**pwd---切换目录：cd  
 **显示当前目录下的文件:**ls/ls&nbsp;-l/ll/ls&nbsp;-lt/ls&nbsp;-a/ls&nbsp;-at  
 **特殊目录标识符:**一个点.表示当前目录----两个点..表示父级目录  
-**查看主机名称:**hostname---修改主机名称:hostname newname(重启后失效） 
+**查看主机名称:**hostname---修改主机名称:hostname newname(重启后失效）  
 **读取文件内容:**cat---cat /etc/sysconfig/network  
 **编辑文件内容:**vi(i键进入编辑插入模式，esc键退出，:wq保存/q!不保存）---vi /etc/sysconfig/network
   
