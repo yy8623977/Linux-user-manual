@@ -19,7 +19,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **进入终端:**Ctrl+Alt+T  
 **清除终端:**clear  
   
-**文件操作**  
+### 文件操作  
 **权限:**可读（r/2^2)---可写（w/2^1)---可执行（针对脚本文件x/2^0)  ---(-表示的没有任何权限）  
 **文件的归属:**拥有者（owner/u)---属于组(group/g)---其他人(other/o)  
 **文件类型:**文件(_)---目录(d)---连接(l)  
@@ -33,13 +33,36 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **特殊目录标识符:**一个点.表示当前目录----两个点..表示父级目录  
 **查看主机名称:**hostname---修改主机名称:hostname newname(重启后失效）  
 **读取文件内容:**cat---cat /etc/sysconfig/network  
-**编辑文件内容:**vi(i键进入编辑插入模式，esc键退出，:wq保存/q!不保存）---vi /etc/sysconfig/network
+**编辑文件内容:**vi(i键进入编辑插入模式，esc键退出，:wq保存/q!不保存）---vi /etc/sysconfig/network  
+**文件拷贝:**cp&nbsp;文件名&nbsp;目标位置  
+**改变文件的拥有者/所在组:**chown/chgrp&nbsp;用户名&nbsp;文件名(-R,--recursive递归，如果改变的是文件夹，其自己也需要同样的权限，在chown/chgrp后加上-R）---chown&nbsp;用户名:用户名&nbsp;文件名（第一个代表用户，第二个代表组)  
+**删除文件:**rm&nbsp;-rf&nbsp;文件名  
+**创建文件:**touch&nbsp;文件名---vi/vim&nbsp;文件名  
+**追加内容:**echo&nbsp;"xxxx"&nbsp;>>&nbsp;文件名  
+**查看文件内容:**cat（全部内容）---more(翻页查看）---tail（文件末尾，通常与-f/-100f连用，ctrl+c退出)---head(文件开头）  
   
+### vi/vim快捷键
+**(查看模式下）**
+**删除最光标所在行:**dd  
+**保存文件内容:**ZZ
+**将光标处的字符给删除:**x  
+**在光标下一行插入内容:**o
+  
+ ### 用户操作  
 #：表示root用户---$：普通用户  
 **启用root用户:**sudo passwd root  
 **root用户下新增普通用户:**useradd hehuan---设置密码：passwd hehuan123---用户目录:/home/hehuan(~代替）   
 **切换用户:**切换到root用户：su root(获取权限，未获取环境变量;su - root(su)直接切换)---切换到普通用户：su hehuan（su - hehuan)  
+**注销当前用户:**exit  
   
+**用户权限改变**  
+**命令查看:**man cmd_name  
+**命令补全:**Tab  
+**修改权限:**chmod(-R,--recursive递归，如果改变的是文件夹，其自己也需要同样的权限，在chmod后加上-R）  
+1. chmod&nbsp;g-w&nbsp;文件名  
+2. chmod&nbsp;(二进制数值/664）  
+  
+ ### IP及远程连接  
 **ip配置:**菜单虚拟机-->网络适配器-->设备状态-->启动是连接-->网络连接-->NAT模式  
 **查看IP：ifconfig**---主要看网卡和IP地址---ping www.baidu.com进行检查  
 **更改为固定IP:**图形界面-->右击-->edit connections-->网卡名-->点击-->ipv4 setting-->manual-->输入address、netmast、  
