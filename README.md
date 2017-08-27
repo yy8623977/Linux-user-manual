@@ -84,7 +84,12 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 -->**创建文件**-->touch readme.txt-->先VI命令添加随便添加一点点东西-->Notepad打开进行编辑保存  
 **ultraEdit:**FTP帐号-->帐号管理-->帐号/协议/服务器/端口(22)/用户名/密码-->视图-->查看方式(可以根据不同的用处选择编辑模式） 
 4. **远程界面工具:Xmanager4**-->Xbrowser-->new-->Xstart&nbsp;Session-->名称/主机名/协议/用户名/密码/  
--->Execution&nbsp;Command(选择最后一个）-->双击-->保存-->右击-->open in terminal
+-->Execution&nbsp;Command(选择最后一个）-->双击-->保存-->右击-->open in terminal  
+  
+## 系统管理  
+**查看系统:**uname---查看内核：uname&nbsp;-r  
+**查看cpu:**cat&nbsp;/proc/cpuinfo  
+**查看内存:**cat&nbsp;/proc/meminfo  
 
   
 
