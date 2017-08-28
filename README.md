@@ -100,6 +100,13 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **挂载与卸载磁盘:**mount&nbsp;/dev/sda*&nbsp;/data---卸载磁盘:umount&nbsp;/dev/sda*(root用户下）  
 **查看内存使用情况:**free/free&nbsp;-m(kb/M)  
 **查看进程使用情况:**top(M详细情况)  
+  
+## 软件安装  
+1. RPM命令  
+**检查软件是否安装:**rpm&nbsp;-qa|grep&nbsp;java  
+**卸载已安装的软件:**rpm&nbsp;-e&nbsp;--nodeps&nbsp;java(多个软件中间用空格隔开）  
+**安装软件:**rpm&nbsp;-ivh&nbsp;java.rpm  
+
 
   
 
