@@ -15,9 +15,6 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 安装CentOS 6.4操作系统 
 
 ## Linux  
-**关机:**halt---重启：reboot/init 6(安全重启）（root用户下）  
-**进入终端:**Ctrl+Alt+T  
-**清除终端:**clear  
   
 ### 文件操作  
 **权限:**可读（r/2^2)---可写（w/2^1)---可执行（针对脚本文件x/2^0)  ---(-表示的没有任何权限）  
@@ -71,8 +68,10 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
  ### IP及远程连接  
 **ip配置:**菜单虚拟机-->网络适配器-->设备状态-->启动是连接-->网络连接-->NAT模式  
 **查看IP：ifconfig**---主要看网卡和IP地址---ping www.baidu.com进行检查  
+**IP文件查看:**cd /etc/sysconfig/network-scripts/  
 **更改为固定IP:**图形界面-->右击-->edit connections-->网卡名-->点击-->ipv4 setting-->manual-->输入address、netmast、  
 gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识点练习  
+**本机主机名host:**0.0.0.0  
   
 **远程连接**  
 **要素:**ip地址/用户名/密码/协议ssh  
@@ -87,9 +86,20 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 -->Execution&nbsp;Command(选择最后一个）-->双击-->保存-->右击-->open in terminal  
   
 ## 系统管理  
+**关机:**halt---重启：reboot/init 6(安全重启）（root用户下）  
+**进入终端:**Ctrl+Alt+T  
+**清除终端:**clear  
+**查看日期:**date（显示当前日期时间）---date&nbsp;-R(显示时区）---cal&nbsp;2017(显示某年日历）  
+**设置日期和时间:**date&nbsp;-s&nbps;2017-08-28---date&nbsp;-s&nbps;07:11:52（root用户下）  
 **查看系统:**uname---查看内核：uname&nbsp;-r  
 **查看cpu:**cat&nbsp;/proc/cpuinfo  
 **查看内存:**cat&nbsp;/proc/meminfo  
+**显示磁盘的使用:**df&nbsp;-lh---du(显示当前目录下磁盘使用情况）---du&nbsp;-s/sh&nbsp;/home/hehuan(显示指定目录下磁盘剩余空间,s显示kb,sh显示M）  
+**查看创建系统时磁盘的挂载情况:**fdisk&nbsp;-l(root用户下）---mount  
+**修复磁盘:*fsck&nbsp;磁盘地址（自动修复）  
+**挂载与卸载磁盘:**mount&nbsp;/dev/sda*&nbsp;/data---卸载磁盘:umount&nbsp;/dev/sda*(root用户下）  
+**查看内存使用情况:**free/free&nbsp;-m(kb/M)  
+**查看进程使用情况:**top(M详细情况)  
 
   
 
