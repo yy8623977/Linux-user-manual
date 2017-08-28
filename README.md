@@ -106,6 +106,8 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **检查软件是否安装:**rpm&nbsp;-qa|grep&nbsp;java  
 **卸载已安装的软件:**rpm&nbsp;-e&nbsp;--nodeps&nbsp;java(多个软件中间用空格隔开）  
 **安装软件:**rpm&nbsp;-ivh&nbsp;java.rpm  
+2. tar（源码，编译）  
+
 
 
   
