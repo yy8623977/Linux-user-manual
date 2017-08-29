@@ -17,7 +17,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 ## Linux  
   
 ### 文件操作  
-**权限~**可读（r/2^2)---可写（w/2^1)---可执行（针对脚本文件x/2^0)  ---(-表示的没有任何权限）  
+**权限~**可读（r/2^2)---可写（w/2^1)---可执行（针对脚本文件x/2^0)  ---(-表示的没有任何权限)  
 **文件的归属~**拥有者（owner/u)---属于组(group/g)---其他人(other/o)  
 **文件类型~**文件(_)---目录(d)---连接(l) （软连接/硬连接）  
 **文件详细说明~**
@@ -26,7 +26,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 3. 文件的大小---文件的创建日期---文件的名称  
   
 **显示当前目录~**pwd---切换目录：cd(文件夹有空格需要加上'')  
-**显示当前目录下的文件~**ls/ls&nbsp;-l/ll/ls&nbsp;-lt/ls&nbsp;-a/ls&nbsp;-at  
+**显示当前目录下的文件~**ls/ls&nbsp;-l/ll/ls&nbsp;-lt/ls&nbsp;-a/ls&nbsp;-at  
 **特殊目录标识符~**一个点.表示当前目录----两个点..表示父级目录  
 **查看主机名称~**hostname---修改主机名称:hostname newname(重启后失效）  
 **读取文件内容~**cat---cat /etc/sysconfig/network  
@@ -40,8 +40,8 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **查看文件内容~**cat（全部内容）---more(翻页查看）---tail（文件末尾，通常与-f/-100f连用，ctrl+c退出)---head(文件开头）  
 **文件的移动和重命名~**mv&nbsp;source&nbsp;target(source是要移动的文件或是文件夹，target是文件或者是文件夹，同目录则重命名，不同目录则移动，如果后加其它文件名或者是文件夹，则移动加重命名）  
 **删除文件/文件夹~**rmdir&nbsp;文件夹(必须是空目录）---rm&nbsp;-rf&nbsp;source(最好是绝对路径，确定好才删除）  
-**文件查找~**find&nbsp;~&nbsp;-name&nbsp;文件名/文件夹名（当前目录）---find&nbsp;/&nbsp;-name&nbsp;文件名/文件夹名（跟目录）---可以匹配正则表达式  
-**创建连接~**ln&nbsp;-s&nbsp;文件名/文件夹名&nbsp;连接名（有-s是软连接，无-s是硬连接,相当于拷贝)  
+**文件查找~**find&nbsp;~&nbsp;-name&nbsp;文件名/文件夹名（当前目录）---find&nbsp;/&nbsp;-name&nbsp;文件名/文件夹名（跟目录）---可以匹配正则表达式  
+**创建连接~**ln -s 文件名/文件夹名 连接名(有-s是软连接，无-s是硬连接,相当于拷贝)  
   
 ### vi/vim快捷键  
 **(查看模式下）**  
