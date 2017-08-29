@@ -54,7 +54,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 #：表示root用户---$：普通用户  
 **查看用户信息~**id  
 **启用root用户~**sudo passwd root  
-**root用户下新增普通用户~**useradd hehuan---设置密码:passwd hehuan123---用户目录:/home/hehuan(~代替)  
+**root用户下新增普通用户~**useradd hehuan---设置密码:passwd hehuan123---用户目录:/home/hehuan(\~代替)  
 **切换用户~**切换到root用户:su root(获取权限,未获取环境变量;su - root(su)直接切换)---切换到普通用户:su hehuan(su - hehuan)  
 **注销当前用户~**exit  
   
@@ -81,7 +81,7 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 1. **SecureCRT**---步骤：win7-->C：windows\System32\drivers\hosts-->localhost-->ip&nbsp;主机名&nbsp;域名  
 -->secureCRT-->快速连接-->主机名-->用户名-->密码-->cat /etc/hosts-->root-->vi /etc/hosts-->ip&nbsp;主机名&nbsp;域名  
 2. **远程FTP~**主机/用户名/密码/端口（22）-->通过文件拖拽上传与下载  
-3. **Notepad**show-->setting-->profile setting-->addnew-->主机名/端口/用户名/密码-->进行连接  
+3. **Notepad~**show-->setting-->profile setting-->addnew-->主机名/端口/用户名/密码-->进行连接  
 -->**创建文件**-->touch readme.txt-->先VI命令添加随便添加一点点东西-->Notepad打开进行编辑保存  
 **ultraEdit~**FTP帐号-->帐号管理-->帐号/协议/服务器/端口(22)/用户名/密码-->视图-->查看方式(可以根据不同的用处选择编辑模式） 
 4. **远程界面工具:Xmanager4**-->Xbrowser-->new-->Xstart&nbsp;Session-->名称/主机名/协议/用户名/密码/  
@@ -98,8 +98,8 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **查看内存~**cat&nbsp;/proc/meminfo  
 **显示磁盘的使用~**df&nbsp;-lh---du(显示当前目录下磁盘使用情况）---du&nbsp;-s/sh&nbsp;/home/hehuan(显示指定目录下磁盘剩余空间,s显示kb,sh显示M）  
 **查看创建系统时磁盘的挂载情况~**fdisk&nbsp;-l(root用户下）---mount  
-**修复磁盘~*fsck&nbsp;磁盘地址（自动修复）  
-**挂载与卸载磁盘~**mount&nbsp;/dev/sda*&nbsp;/data---卸载磁盘:umount&nbsp;/dev/sda*(root用户下）  
+**修复磁盘~**fsck&nbsp;磁盘地址(自动修复)  
+**挂载与卸载磁盘~**mount&nbsp;/dev/sda*&nbsp;/data---卸载磁盘:umount&nbsp;/dev/sda*(root用户下）  
 **查看内存使用情况~**free/free&nbsp;-m(kb/M)  
 **查看进程使用情况~**top(M详细情况)  
   
