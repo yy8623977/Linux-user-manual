@@ -18,7 +18,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
   
 ### 文件操作  
 **权限~**可读（r/2^2)---可写（w/2^1)---可执行（针对脚本文件x/2^0)  ---(-表示的没有任何权限)  
-**文件的归属~**拥有者（owner/u)---属于组(group/g)---其他人(other/o)  
+**文件的归属~**拥有者（owner/u)---属于组(group/g)---其他人(other/o)  
 **文件类型~**文件(_)---目录(d)---连接(l) （软连接/硬连接）  
 **文件详细说明~**
 1. 第一部分：第一个代表文件的类型，后面分三组代表不同权限用户的权限（u/g/o)  
@@ -54,7 +54,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 #：表示root用户---$：普通用户  
 **查看用户信息~**id  
 **启用root用户~**sudo passwd root  
-**root用户下新增普通用户~**useradd hehuan---设置密码：passwd hehuan123---用户目录:/home/hehuan(~代替）   
+**root用户下新增普通用户~**useradd hehuan---设置密码：passwd hehuan123---用户目录:/home/hehuan(~代替)  
 **切换用户~**切换到root用户：su root(获取权限，未获取环境变量;su - root(su)直接切换)---切换到普通用户：su hehuan（su - hehuan)  
 **注销当前用户~**exit  
   
