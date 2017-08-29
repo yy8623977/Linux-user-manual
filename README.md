@@ -102,11 +102,11 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **挂载与卸载磁盘~**mount&nbsp;/dev/sda*&nbsp;/data---卸载磁盘:umount&nbsp;/dev/sda*(root用户下）  
 **查看内存使用情况~**free/free&nbsp;-m(kb/M)  
 **查看进程使用情况~**top(M详细情况)  
-  
+  
 **防火墙~**  
 **查看防火墙状态~**sudo service iptables status  
 **关闭防火墙~**sudo service iptables stop  
-**启动防火墙(临时)~**sudo service iptables start(restar)  
+**启动临时防火墙~**sudo service iptables start（restar）  
 **永久关闭/开启防火墙~**sudo chkconfig iptables off/on  
   
 **另外一种方式**  
@@ -114,6 +114,9 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **开启防火墙~**sudo service httpd start  
 **永久关闭防火墙~**sudo chkconfig httpd off  
 **查看防火墙永久状态~**sudo checkconfig --list|grep httpd(2,3,4,5是on即是开启）  
+  
+**SELINUX禁用**  
+sudo vi /etc/sysconfig/selinux--->SELINUX=disabled  
 
   
 ## 软件安装  
