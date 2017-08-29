@@ -110,9 +110,9 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **解压:**tar -zxvf xxx.tar.gz（到当前目录）---tar -zxvf xxxx.tar.gz -C dir（到指定目录）  
 **压缩:**tar -zcvf xxx.tar.gz dir  
 **安装软件:**bin/java  
-**添加环境变量:**vi&nbsp;/etc/profile-->文件最后的位置插入-->export JAVA_HOME=（bin文件的父目录）-->换行-->export PATH=$PATH:$JAVA_HOME/bin/-->保存退出-->source /etc/profile(让目录生效）--echo $JAVA_HOME-->echo $PATH  
+**添加环境变量:**vi&nbsp;/etc/profile-->文件最后的位置插入-->export JAVA_HOME=（bin文件的父目录）-->换行-->export PATH=$PATH:$JAVA_HOME/bin/-->保存退出-->source /etc/profile(让目录生效）--echo $JAVA_HOME(进行查看)-->echo $PATH-->java-->java -version
 3. zip软件  
-**解压：**unzip xxx.zip---压缩：zip yy.zip file  
+**解压:**unzip xxx.zip---压缩：zip yy.zip file  
 4. yum  
 需要配置源---解决了软件包依赖关系以及各个软件的安装顺序  
 
