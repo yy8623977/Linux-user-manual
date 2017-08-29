@@ -54,8 +54,8 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 #：表示root用户---$：普通用户  
 **查看用户信息~**id  
 **启用root用户~**sudo passwd root  
-**root用户下新增普通用户~**useradd hehuan---设置密码：passwd hehuan123---用户目录:/home/hehuan(~代替)  
-**切换用户~**切换到root用户：su root(获取权限，未获取环境变量;su - root(su)直接切换)---切换到普通用户：su hehuan（su - hehuan)  
+**root用户下新增普通用户~**useradd hehuan---设置密码:passwd hehuan123---用户目录:/home/hehuan(~代替)  
+**切换用户~**切换到root用户:su root(获取权限，未获取环境变量;su - root(su)直接切换)---切换到普通用户:su hehuan(su - hehuan)  
 **注销当前用户~**exit  
   
 **用户权限改变**  
