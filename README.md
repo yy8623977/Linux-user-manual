@@ -63,7 +63,10 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **命令补全:**Tab  
 **修改权限:**chmod(-R,--recursive递归，如果改变的是文件夹，其自己也需要同样的权限，在chmod后加上-R）  
 1. chmod&nbsp;g-w&nbsp;文件名  
-2. chmod&nbsp;(二进制数值/664）  
+2. chmod&nbsp;(二进制数值/664） 
+  
+**设置普通用户的sudo权限:**su-->vi /etc/sudoers-->在第一行添加-->hehuan ALL=(root)NOPASSWD:ALL  
+**
   
  ### IP及远程连接  
 **ip配置:**菜单虚拟机-->网络适配器-->设备状态-->启动是连接-->网络连接-->NAT模式  
@@ -115,6 +118,8 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **解压:**unzip xxx.zip---压缩：zip yy.zip file  
 4. yum  
 需要配置源---解决了软件包依赖关系以及各个软件的安装顺序  
+  
+
 
 
 
