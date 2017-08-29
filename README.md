@@ -1,6 +1,6 @@
 # Linux-user-manual  
   
-## Hadoop前置课程woshilaiganhuode
+## Hadoop前置课程
 - Linux系统
 - Java语言，JSE相关知识
 - Mysql基本的DML和DDL
