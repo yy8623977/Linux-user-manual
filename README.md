@@ -25,8 +25,8 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 2. 第二部分：拥有者---属于组  
 3. 文件的大小---文件的创建日期---文件的名称  
   
-**显示当前目录:**pwd---切换目录：cd  
-**显示当前目录下的文件:**ls/ls&nbsp;-l/ll/ls&nbsp;-lt/ls&nbsp;-a/ls&nbsp;-at  
+**显示当前目录:**pwd---切换目录：cd(文件夹有空格需要加上'')  
+**显示当前目录下的文件:**ls/ls&nbsp;-l/ll/ls&nbsp;-lt/ls&nbsp;-a/ls&nbsp;-at  
 **特殊目录标识符:**一个点.表示当前目录----两个点..表示父级目录  
 **查看主机名称:**hostname---修改主机名称:hostname newname(重启后失效）  
 **读取文件内容:**cat---cat /etc/sysconfig/network  
@@ -103,7 +103,9 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **挂载与卸载磁盘:**mount&nbsp;/dev/sda*&nbsp;/data---卸载磁盘:umount&nbsp;/dev/sda*(root用户下）  
 **查看内存使用情况:**free/free&nbsp;-m(kb/M)  
 **查看进程使用情况:**top(M详细情况)  
-  
+  
+**防火墙:**
+  
 ## 软件安装  
 1. RPM命令  
 **检查软件是否安装:**rpm&nbsp;-qa|grep&nbsp;java  
