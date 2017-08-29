@@ -106,7 +106,17 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **检查软件是否安装:**rpm&nbsp;-qa|grep&nbsp;java  
 **卸载已安装的软件:**rpm&nbsp;-e&nbsp;--nodeps&nbsp;java(多个软件中间用空格隔开）  
 **安装软件:**rpm&nbsp;-ivh&nbsp;java.rpm  
-2. tar（源码，编译）  
+2. tar软件（源码，编译,不推荐）  
+**解压:**tar -zxvf xxx.tar.gz（到当前目录）---tar -zxvf xxxx.tar.gz -C dir（到指定目录）  
+**压缩:**tar -zcvf xxx.tar.gz dir  
+**安装软件:**bin/java  
+**添加环境变量:**vi&nbsp;/etc/profile-->文件最后的位置插入-->export JAVA_HOME=（bin文件的父目录）-->换行-->export PATH=$PATH:$JAVA_HOME/bin/-->保存退出-->source /etc/profile(让目录生效）--echo $JAVA_HOME-->echo $PATH  
+3. zip软件  
+**解压：**unzip xxx.zip---压缩：zip yy.zip file  
+4. yum  
+需要配置源---解决了软件包依赖关系以及各个软件的安装顺序  
+
+
 
 
 
