@@ -1,4 +1,4 @@
-# Linux-user-manual  做个修改
+# Linux-user-manual
   
 ## Hadoop前置课程
 - Linux系统
