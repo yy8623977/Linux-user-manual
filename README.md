@@ -1,4 +1,4 @@
-# Linux-user-manualtest
+# Linux-user-manual
   
 ## Hadoop前置课程
 - Linux系统
