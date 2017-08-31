@@ -140,6 +140,13 @@ sudo apt remove sogoupinyin
 sudo apt install 依赖包  
 输入法--->设置--->高级--->Fick设置--->只留搜狗和键盘-英语--->关闭--->保存  
   
+**VMware Tools安装**  
+**前置更新:**  sudo apt-get update ---> sudo apt-get install net-tools  
+**挂载:** sudo mount  /dev/cdrom /media  
+**复制解压:** cp /media/VMwareTools-9.6.4-2441333.tar.gz /tmp ---> tar -xzvf VMwareTools-9.6.4-2441333.tar.gz  
+**安装:** cd vmware-tools-distrib ---> ./vmware-install.pl  
+
+  
 
   
 
