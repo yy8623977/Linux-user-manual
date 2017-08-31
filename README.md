@@ -36,7 +36,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **删除文件:** rm&nbsp;-rf&nbsp;文件名  
 **创建文件夹:** mkdir&nbsp;文件夹名(mkdir后面加-p可创建多级目录）  
 **创建文件:** touch&nbsp;文件名---vi/vim&nbsp;文件名  
-**追加内容:** echo&nbsp;"xxxx"&nbsp;>>&nbsp;文件名  
+**追加内容:** echo "xxxx" >> 文件名  
 **查看文件内容:** cat（全部内容）---more(翻页查看）---tail（文件末尾，通常与-f/-100f连用，ctrl+c退出)---head(文件开头）  
 **文件的移动和重命名:** mv&nbsp;source&nbsp;target(source是要移动的文件或是文件夹，target是文件或者是文件夹，同目录则重命名，不同目录则移动，如果后加其它文件名或者是文件夹，则移动加重命名）  
 **删除文件/文件夹:** rmdir&nbsp;文件夹(必须是空目录）---rm&nbsp;-rf&nbsp;source(最好是绝对路径，确定好才删除）  
@@ -52,6 +52,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
   
  ### 用户操作  
 #：表示root用户---$：普通用户  
+**查看命令所在位置:** witch date  
 **查看当前用户**: who  
 **查看用户信息:** id  
 **启用root用户:** sudo passwd root  
@@ -148,7 +149,29 @@ sudo apt install 依赖包
 **安装:** cd vmware-tools-distrib ---> ./vmware-install.pl  
   
 ### Crontab  
-每个用户都可以调度自己的任务
+每个用户都可以调度自己的任务  
+**编辑:** crontab -e(选择编辑模式:select -editor)--->插入命令(每分钟执行一次)---> */1 * * * * /bin/date >> /home/hehuan/test.txt  
+**查看:** crontab -l  
+**删除:** crontab -r  
+**基本格式:** \* \* \* \* \* command  
+每个\*的含义:  
+1. 分 1-59 \*/10  
+2. 时 0-23 */2  
+3. 日 1-31 
+4. 月 1-12  
+5. 星期 0-6 0代表星期天  
+  
+**例子**  
+每天21:30执行---> 30 21 * * * cmd  
+每个月1,11,21的2:30执行---> 30 2 1,11,21 * * cmd  
+每周六或者每周日1:45执行---> 45 1 * * 6,0 cmd  
+每天20:00至23:00,每半个小时执行一次---> 0,30 20-23 * * * cmd  
+每一小时执行一次---> * */1 * * * cmd  
+
+
+
+
+
 
   
 
