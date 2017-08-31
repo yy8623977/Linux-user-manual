@@ -12,7 +12,8 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **虚拟化工具：VMWare**   
 安装VMWare  
 新建虚拟机  
-安装CentOS 6.4操作系统 
+安装CentOS 6.4操作系统  
+**磁盘损坏修复:** 输入root用户密码--->fsck 损坏磁盘--->yes--->reboot
 
 ## Linux  
   
@@ -26,7 +27,7 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 3. 文件的大小---文件的创建日期---文件的名称  
   
 **显示当前目录:** pwd---切换目录：cd(文件夹有空格需要加上'')  
-**显示当前目录下的文件:** ls/ls&nbsp;-l/ll/ls&nbsp;-lt/ls&nbsp;-a/ls&nbsp;-at  
+**显示当前目录下的文件:** ls/ls -l/ls -lt/ls -a/ls -at/ll/ll -al  
 **特殊目录标识符:** 一个点.表示当前目录----两个点..表示父级目录  
 **查看主机名称:** hostname---修改主机名称:hostname newname(重启后失效）  
 **读取文件内容:** cat---cat /etc/sysconfig/network  
@@ -53,10 +54,10 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
  ### 用户操作  
 #：表示root用户---$：普通用户  
 **查看命令所在位置:** witch date  
-**查看当前用户**: who  
+**查看当前用户**: who/whoami  
 **查看用户信息:** id  
 **启用root用户:** sudo passwd root  
-**root用户下新增普通用户:** useradd hehuan---设置密码:passwd hehuan123---用户目录:/home/hehuan(\~代替)  
+**root用户下新增普通用户:** useradd/adduser hehuan---设置密码:passwd hehuan123---用户目录:/home/hehuan(\~代替)  
 **切换用户:** 切换到root用户:su root(获取权限,未获取环境变量;su - root(su)直接切换)---切换到普通用户:su hehuan(su - hehuan)  
 **注销当前用户:** exit  
   
@@ -83,7 +84,7 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 1. **SecureCRT**---步骤：win7-->C：windows\System32\drivers\hosts-->localhost-->ip&nbsp;主机名&nbsp;域名  
 -->secureCRT-->快速连接-->主机名-->用户名-->密码-->cat /etc/hosts-->root-->vi /etc/hosts-->ip&nbsp;主机名&nbsp;域名  
 2. **远程FTP:** 主机/用户名/密码/端口（22）-->通过文件拖拽上传与下载  
-3. **Notepad:** show-->setting-->profile setting-->addnew-->主机名/端口/用户名/密码-->进行连接  
+3. **Notepad:** show-->setting-->profile setting-->addnew-->主机名/端口/用户名/密码-->进行连接  
 -->**创建文件**-->touch readme.txt-->先VI命令添加随便添加一点点东西-->Notepad打开进行编辑保存  
 **ultraEdit:** FTP帐号-->帐号管理-->帐号/协议/服务器/端口(22)/用户名/密码-->视图-->查看方式(可以根据不同的用处选择编辑模式） 
 4. **远程界面工具:Xmanager4**-->Xbrowser-->new-->Xstart&nbsp;Session-->名称/主机名/协议/用户名/密码/  
@@ -102,7 +103,7 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **显示磁盘的使用:** df&nbsp;-lh---du(显示当前目录下磁盘使用情况）---du&nbsp;-s/sh&nbsp;/home/hehuan(显示指定目录下磁盘剩余空间,s显示kb,sh显示M）  
 **查看创建系统时磁盘的挂载情况:** fdisk&nbsp;-l(root用户下）---mount  
 **修复磁盘:** fsck&nbsp;磁盘地址(自动修复)  
-**挂载与卸载磁盘:** mount&nbsp;/dev/sda*&nbsp;/data---卸载磁盘:umount&nbsp;/dev/sda*(root用户下）  
+**挂载与卸载磁盘:** mount&nbsp;/dev/sda*&nbsp;/data---卸载磁盘:umount&nbsp;/dev/sda*(root用户下）  
 **查看内存使用情况:** free/free&nbsp;-m(kb/M)  
 **查看进程使用情况:** top(M详细情况)  
   
@@ -121,7 +122,7 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **SELINUX禁用**  
 sudo vi /etc/sysconfig/selinux--->SELINUX=disabled  
 
-  
+  
 ## 软件安装  
 1. RPM命令  
 **检查软件是否安装:** rpm&nbsp;-qa|grep&nbsp;java  
@@ -168,6 +169,68 @@ sudo apt install 依赖包
 每周六或者每周日1:45执行---> 45 1 * * 6,0 cmd  
 每天20:00至23:00,每半个小时执行一次---> 0,30 20-23 * * * cmd  
 每一小时执行一次---> * */1 * * * cmd  
+
+### shell编程  
+sbin/hadoop-deamon.sh start namenode(.sh结尾的shell脚本,start namenode是位置参量)  
+  
+**什么是shell程序:**   
+1. 文本形式,批量的linux命令集合,能被shell解释执行  
+2. 由linux命令、shell命令、控制语句以及注释语句构成  
+3. 纯文本文件,可用任意编辑器编写,通常以.sh作为后缀名  
+  
+**程序执行的方式**  
+1. ./test.sh  
+2. . test.sh  
+3. sh test.sh  
+  
+**第一行:** 指定用哪个程序来编译和执行脚本---> #!/bin/bash或者#!/bin/sh  
+**注释:** 使用#符号  
+  
+**变量:**  
+**变量命名:** 必须以字母或下划线开头,后面可以跟字母、数字或者下划线,任何其他字符都标志变量名的结束.---变量名关于大小写敏感,变量类型不是那么重要  
+  
+**变量作用域:** 
+1. **本地变量**:  只是在当前shell程序中可用
+2. **全局环境变量:** ---> /etc/profile  
+3. **用户环境变量:** --->vi  /home/hehuan/.bash_profile--->插入--->exprot name=hehuan--->source /home/hehuan/ .hash_profile--->echo ${name}  
+ 环境变量需要大写 ,如果父shell进程产生了子shell进程,则环境变量可被"继承"并复制  
+   
+**变量的赋值**  
+等号两边不能有空格  
+在等号后面跟一个换行符给变量赋空值  
+举例:name=hehuan---echo $name / echo ${name}  
+清除变量: unset name  
+显示所有变量: set  
+  
+**位置参量**  
+- 是一组特殊的内置变量,通常被shell脚本用来从命令行接受参数,或被函数用来保存传递给它的参数  
+- 执行shell脚本,用户可以通过命令行向脚本传递信息,跟在脚本名后面的用空格隔开的每个字符串都称为位置参量  
+- 在脚本中使用这些参数,需要通过位置参量来引用,如$1表示第一个参数,数字也可以用花括号括起来,如${1},但从10开始必须用花括号括起来;  
+-  ./test.sh $1 ${2},其中可以传递位置参量,也可以不传递   
+  
+**位置参数的含义** 
+$0--->表示当前文件名---> **三种执行方式不结果不相同**---> ./test.sh(./test.sh)---> . test.sh(-bash)--->sh test.sh(test.sh)  
+$1-$9  
+$10  
+$#--->实际的位置参数个数  
+$*--->以单个字符显示所有位置参量  
+$@--->未加双引号时与$*含义相同,加双引号时有区别  
+$$--->脚本运行的当前进程号  
+$!--->最后一个后台运行的进程的进程号  
+**$?(退出码)**--->显示前面最后一个命令的退出状态,0表示没有错误,其他任何值表示有错误  
+**注意:** 如果位置餐两种含有空格,需要使用双引号括起来  
+  
+**退出码**
+- 任何命令进行时都会返回一个退出状态  
+- 查看命令: echo $?  
+- 应用中通常会在关键步骤后判定$?,以确定关键步骤的执行是否正常,尤其时调度系统里需要监控sh返回码  
+- shell脚本的返回码取决于最后一个命令的返回码  
+- 程序控制返回码: exit N--->退出状态为0,成功,无错误--->退出状态大于-,失败,某处有错误  
+  
+
+
+
+
 
 
 
