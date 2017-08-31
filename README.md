@@ -45,13 +45,14 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
   
 ### vi/vim快捷键  
 **(查看模式下）**  
-**删除最光标所在行:** dd  
+**删除光标所在行:** dd  
 **保存文件内容:** ZZ  
 **将光标处的字符给删除:** x  
 **在光标下一行插入内容:** o  
   
  ### 用户操作  
 #：表示root用户---$：普通用户  
+**查看当前用户**: who  
 **查看用户信息:** id  
 **启用root用户:** sudo passwd root  
 **root用户下新增普通用户:** useradd hehuan---设置密码:passwd hehuan123---用户目录:/home/hehuan(\~代替)  
@@ -145,6 +146,9 @@ sudo apt install 依赖包
 **挂载:** sudo mount  /dev/cdrom /media  
 **复制解压:** cp /media/VMwareTools-9.6.4-2441333.tar.gz /tmp ---> tar -xzvf VMwareTools-9.6.4-2441333.tar.gz  
 **安装:** cd vmware-tools-distrib ---> ./vmware-install.pl  
+  
+### Crontab  
+每个用户都可以调度自己的任务
 
   
 
