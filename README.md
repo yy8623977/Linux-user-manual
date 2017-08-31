@@ -93,8 +93,9 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **关机:** halt---重启：reboot/init 6(安全重启）（root用户下）  
 **进入终端:** Ctrl+Alt+T  
 **清除终端:** clear  
-**查看日期:** date（显示当前日期时间）---date&nbsp;-R(显示时区）---cal&nbsp;2017(显示某年日历）  
-**设置日期和时间:** date&nbsp;-s&nbps;2017-08-28---date&nbsp;-s&nbps;07:11:52（root用户下）  
+**查看日期:** date（显示当前日期时间）---date -R(显示时区）---cal 2017(显示某年日历）  
+**设置日期和时间:** date -s 2017-08-28---date -s 07:11:52（root用户下）  
+**设置成当地时区:** timedatectl set-local-rtc true  
 **查看系统:** uname---查看内核：uname&nbsp;-r  
 **查看cpu:** cat&nbsp;/proc/cpuinfo  
 **查看内存:** cat&nbsp;/proc/meminfo  
