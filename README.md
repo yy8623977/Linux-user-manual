@@ -133,6 +133,14 @@ sudo vi /etc/sysconfig/selinux--->SELINUX=disabled
 **解压:** unzip xxx.zip---压缩：zip yy.zip file  
 4. yum  
 需要配置源---解决了软件包依赖关系以及各个软件的安装顺序  
+5. deb  
+sudo apt-get install -f  
+sudo apt dpkg -i 应用全名  
+sudo apt remove sogoupinyin
+sudo apt install 依赖包  
+输入法--->设置--->高级--->Fick设置--->只留搜狗和键盘-英语--->关闭--->保存  
+  
+
   
 
 
