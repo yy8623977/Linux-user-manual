@@ -93,10 +93,7 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 ## 系统管理  
 **关机:** halt---重启：reboot/init 6(安全重启）（root用户下）  
 **进入终端:** Ctrl+Alt+T  
-**清除终端:** clear  
-**查看日期:** date（显示当前日期时间）---date -R(显示时区）---cal 2017(显示某年日历）  
-**设置日期和时间:** date -s 2017-08-28---date -s 07:11:52（root用户下）  
-**设置成当地时区:** timedatectl set-local-rtc true  
+**清除终端:** clear   
 **查看系统:** uname---查看内核：uname&nbsp;-r  
 **查看cpu:** cat&nbsp;/proc/cpuinfo  
 **查看内存:** cat&nbsp;/proc/meminfo  
@@ -178,6 +175,11 @@ sbin/hadoop-deamon.sh start namenode(.sh结尾的shell脚本,start namenode是�
 2. 由linux命令、shell命令、控制语句以及注释语句构成  
 3. 纯文本文件,可用任意编辑器编写,通常以.sh作为后缀名  
   
+**程序执行的方式**  
+1. ./test.sh  
+2. . test.sh  
+3. sh test.sh  
+  
 **第一行:** 指定用哪个程序来编译和执行脚本---> #!/bin/bash或者#!/bin/sh  
 **注释:** 使用#符号  
   
@@ -222,10 +224,20 @@ $!--->最后一个后台运行的进程的进程号
 - shell脚本的返回码取决于最后一个命令的返回码  
 - 程序控制返回码: exit N--->退出状态为0,成功,无错误--->退出状态大于-,失败,某处有错误  
   
-**程序执行的方式**  
-1. ./test.sh  
-2. . test.sh  
-3. sh test.sh  
+**数组**
+赋值: arr=(one two three)  
+输出一个: echo ${arr[0]} ---> 输出所有: echo ${arr[*]} ---> 输出个数: echo ${#arr[*]}  
+修改值: arr[0]=modify  
+  
+**命令date**  
+查看日期: date（显示当前日期时间）---date -R(显示时区）---cal 10 2017(显示某年某月日历）  
+设置日期和时间: date -s 2017-08-28---date -s 07:11:52（root用户下）  
+设置成当地时区: timedatectl set-local-rtc true 
+赋值及格式: date1=$(date +%Y/%m%dT%H:%M:%S) --->输出: echo ${date1}  
+两天前: date2=$(date --date='-2 days' +%Y-%m-%d) ---> 两天后: 将-2变成2    
+
+
+
 
 
 
