@@ -77,8 +77,11 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **更改为固定IP:** 图形界面-->右击-->edit connections-->网卡名-->点击-->ipv4 setting-->manual-->输入address、netmast、  
 gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识点练习  
 **本机主机名host:** 0.0.0.0  
+**是否安装ssh服务:** ps -e | grep ssh  
+**安装ssh服务:** sudo apt-get install openssh-server  
+**启动ssh服务:** /etc/init.d/ssh start  
   
-**远程连接**  
+**远程连接**  
 **要素:** ip地址/用户名/密码/协议ssh  
 **工具**    
 1. **SecureCRT**---步骤：win7-->C：windows\System32\drivers\hosts-->localhost-->ip&nbsp;主机名&nbsp;域名  
@@ -115,8 +118,9 @@ gateway-->apply-->disconnect-->connect-->最后是连不上网的，作为知识
 **开启防火墙:** sudo service httpd start  
 **永久关闭防火墙:** sudo chkconfig httpd off  
 **查看防火墙永久状态:** sudo checkconfig --list|grep httpd(2,3,4,5是on即是开启）  
+**给防火墙开启端口:** sudo ufw allow 22  
   
-**SELINUX禁用**  
+**SELINUX禁用**  
 sudo vi /etc/sysconfig/selinux--->SELINUX=disabled  
 
   
