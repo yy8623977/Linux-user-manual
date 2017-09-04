@@ -30,8 +30,8 @@ Hadoop支持debian(CentOS)、redhat、Sles、ubuntu,用的多的是redhat(CentOS
 **显示当前目录下的文件:** ls/ls -l/ls -lt/ls -a/ls -at/ll/ll -al  
 **特殊目录标识符:** 一个点.表示当前目录----两个点..表示父级目录  
 **查看主机名称:** hostname---修改主机名称:hostname newname(重启后失效）  
-**读取文件内容:** cat---cat /etc/sysconfig/network  
-**编辑文件内容:** vi(i键进入编辑插入模式，esc键退出，:wq保存/q!不保存）---vi /etc/sysconfig/network  
+**读取文件内容:** cat---cat /etc/hostname  
+**编辑文件内容:** vi(i键进入编辑插入模式，esc键退出，:wq保存/q!不保存）---vi /etc/hostname  
 **文件拷贝:** cp&nbsp;文件名&nbsp;目标位置（文件名/目录）---cp&nbsp;-r&nbsp;目录&nbsp;目录  
 **改变文件的拥有者/所在组:** chown/chgrp&nbsp;用户名&nbsp;文件名(-R,--recursive递归，如果改变的是文件夹，其自己也需要同样的权限，在chown/chgrp后加上-R）---chown&nbsp;用户名:用户名&nbsp;文件名（第一个代表用户，第二个代表组)  
 **删除文件:** rm&nbsp;-rf&nbsp;文件名  
