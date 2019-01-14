@@ -1,4 +1,2 @@
-# Initial page edit in summary
-
-
+# Initial page
 
